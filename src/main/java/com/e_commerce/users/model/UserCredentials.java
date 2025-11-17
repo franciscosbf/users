@@ -1,4 +1,4 @@
-package com.e_commerce.users;
+package com.e_commerce.users.model;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;

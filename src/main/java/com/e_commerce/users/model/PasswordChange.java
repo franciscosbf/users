@@ -1,6 +1,5 @@
 package com.e_commerce.users.model;
 
-import com.e_commerce.users.UserCredentials;
 import com.e_commerce.users.constraints.PasswordConstraint;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;

@@ -3,6 +3,7 @@ package com.e_commerce.users;
 import com.e_commerce.users.events.EmailUpdate;
 import com.e_commerce.users.events.EventSender;
 import com.e_commerce.users.model.EmailChange;
+import com.e_commerce.users.model.UserCredentials;
 import org.junit.jupiter.api.Test;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
