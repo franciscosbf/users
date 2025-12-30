@@ -28,12 +28,4 @@ public class EventConfiguration {
     public Jackson2JsonMessageConverter messageConverter() {
         return new Jackson2JsonMessageConverter();
     }
-
-    @Bean
-    public RabbitTemplate setMessageConverter(RabbitTemplate rabbitTemplate,
-                                              Jackson2JsonMessageConverter messageConverter) {
-        rabbitTemplate.setMessageConverter(messageConverter);
-
-        return rabbitTemplate;
-    }
 }

@@ -98,8 +98,10 @@ public class UserServiceEventTests {
         }
 
         @Bean
-        public UserService userService(RabbitTemplate rabbitTemplate) {
-            return new UserService(mockedRepository, mockedPasswordEncoder, new EventSender(rabbitTemplate));
+        public UserService userService(RabbitTemplate rabbitTemplate,
+                                       Jackson2JsonMessageConverter messageConverter) {
+            return new UserService(mockedRepository, mockedPasswordEncoder, new EventSender(
+                    rabbitTemplate, messageConverter));
         }
 
         @Bean

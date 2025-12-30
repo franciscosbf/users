@@ -1,6 +1,7 @@
 package com.e_commerce.users.events;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,7 +11,10 @@ public class EventSender {
 
     private final RabbitTemplate rabbitTemplate;
 
-    public EventSender(RabbitTemplate rabbitTemplate) {
+    public EventSender(RabbitTemplate rabbitTemplate,
+                       Jackson2JsonMessageConverter messageConverter) {
+        rabbitTemplate.setMessageConverter(messageConverter);
+
         this.rabbitTemplate = rabbitTemplate;
     }
 
